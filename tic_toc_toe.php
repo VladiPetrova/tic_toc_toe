@@ -10,13 +10,13 @@ while (true) {
 //играч 1 дай координати 
     while (true) {
         //printBoard($arr);
-        echo "Играч 1, въведи кoординат X: \n";
+        echo "Player 1, enter X coordinates:: \n";
         $x = trim(fgets(STDIN));
-        echo "Играч 1, въведи координат Y: \n";
+        echo "Player 1, enter Y coordinates:: \n";
         $y = trim(fgets(STDIN));
         //check x,y
         if ($x < 0 || $x > 2 || $y < 0 || $y > 2 || $arr[$x][$y] != " ") {
-            echo "Невалидни координати.\n";
+            echo "Invalid coordinates.\n";
             continue;
         } else {
             //запиши координати на играч 1
@@ -32,13 +32,13 @@ while (true) {
 //играч 2 дай координати
     while (true) {
         //printBoard($arr);
-        echo "Играч 2, въведи кoординат W: \n";
+        echo "Player 2, enter W coordinates:: \n";
         $w = trim(fgets(STDIN));
-        echo "Играч 2, въведи координат Z: \n";
+        echo "Player 2, enter Z coordinates:: \n";
         $z = trim(fgets(STDIN));
         //check x,y
         if ($w < 0 || $w > 2 || $z < 0 || $z > 2 || $arr[$w][$z] != " ") {
-            echo "Невалидни координати.\n";
+            echo "Invalid coordinates.\n";
             continue;
         } else {
             //запиши координати на играч 2
@@ -104,7 +104,7 @@ function check(&$arr, $player) {
     }
 
     if ($isWin) {
-        echo "Ура $player печели!";
+        echo "Yey $player wins!";
         newGame($arr);
     }
 
@@ -120,7 +120,7 @@ function checkIsFull(&$arr) {
         }
     }
 
-    echo "Няма празни места.\n";
+    echo "No empty places left.\n";
     newGame($arr);
     return true;
 }
